@@ -1,24 +1,24 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
-	url = git@github.com:tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/vim-nerdtree-tabs"]
 	path = vim/bundle/vim-nerdtree-tabs
-	url = git@github.com:jistr/vim-nerdtree-tabs.git
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
 [submodule "vim/bundle/vim-isort"]
 	path = vim/bundle/vim-isort
-	url = git@github.com:fisadev/vim-isort.git
+	url = https://github.com/fisadev/vim-isort.git
 [submodule "vim/bundle/vim-flake8"]
 	path = vim/bundle/vim-flake8
-	url = git@github.com:nvie/vim-flake8.git
+	url = https://github.com/nvie/vim-flake8.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
-	url = git@github.com:ervandew/supertab.git
+	url = https://github.com/ervandew/supertab.git
 [submodule "vim/bundle/lightline.vim"]
 	path = vim/bundle/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
+	url = https://github.com/itchyny/lightline.vim.git
