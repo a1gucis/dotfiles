@@ -24,16 +24,6 @@ au FileType css setlocal ts=2 sts=2 sw=2 expandtab
 au FileType javascript setlocal ts=2 sts=2 sw=2 ai expandtab
 au FileType python setlocal ts=4 sts=4 sw=4 ai expandtab
 
-" Use the below highlight group when displaying bad whitespace is desired.
-highlight BadWhitespace ctermbg=red guibg=red
-
-" Display tabs at the beginning of a line in Python mode as bad.
-au BufRead,BufNewFile * match BadWhitespace /^\t\+/
-
-" Make trailing whitespace be flagged as bad.
-au BufRead,BufNewFile * match BadWhitespace /\s\+$/
-
-
 function TrimFile()
 	let save_cursor = getpos(".")
 	:silent! %s/\($\n\s*\)\+\%$// " Remove all trailing newlines
@@ -41,12 +31,16 @@ function TrimFile()
 	call setpos('.', save_cursor)
 endfunction
 
-au BufWritePre *.py :Isort " sort all imports
-au BufWritePre * call TrimFile() " trim the file before saving
-" au BufWritePre * :%s/\s\+$//e " Remove trailing whitespaces on write
-au BufWritePost *.py call Flake8()
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
 
+" Python specifics
 let g:flake8_max_line_length = 120
+au BufRead,BufNewFile *.py match BadWhitespace /^\t\+/ " Display tabs at the beginning of a line in Python mode as bad.
+au BufRead,BufNewFile *.py match BadWhitespace /\s\+$/ " Make trailing whitespace be flagged as bad.
+au BufWritePre *.py :Isort " sort all imports
+au BufWritePre *.py call TrimFile() " trim the file before saving
+au BufWritePost *.py call Flake8()
 
 syntax on " For full syntax highlighting:
 
