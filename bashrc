@@ -117,5 +117,4 @@ fi
 export EDITOR=vim
 
 # update PATH
-export PATH=~/usr/local/bin:~/google_appengine:$PATH
-export PATH=~/node_modules/.bin:$PATH
+export PATH=~/.local/bin:~/usr/local/bin:~/google_appengine:~/node_modules/.bin:$PATH

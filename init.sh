@@ -11,6 +11,8 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 files="vimrc vim gitconfig isort.cfg bashrc"    # list of files/folders to symlink in homedir
 
 ##########
+# install packages
+pip install --user isort flake8
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
