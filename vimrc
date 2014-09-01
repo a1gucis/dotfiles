@@ -42,6 +42,7 @@ au BufRead,BufNewFile *.py match BadWhitespace /\s\+$/ " Make trailing whitespac
 au BufWritePre *.py :Isort " sort all imports
 au BufWritePre *.py call TrimFile() " trim the file before saving
 au BufWritePost *.py call Flake8()
+au BufWritePre *.js call TrimFile() " trim the file before saving
 
 syntax on " For full syntax highlighting:
 
