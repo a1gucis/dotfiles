@@ -116,5 +116,8 @@ fi
 # set default editor to vim
 export EDITOR=vim
 
+export SCALA_HOME=$HOME/scala-2.11.2
+export JAVA_HOME=$HOME/jdk1.8.0_25
+
 # update PATH
-export PATH=~/.local/bin:~/usr/local/bin:~/google_appengine:~/node_modules/.bin:$PATH
+export PATH=~/.local/bin:~/usr/local/bin:~/google_appengine:~/node_modules/.bin:$JAVA_HOME/bin:$SCALA_HOME/bin:$PATH
